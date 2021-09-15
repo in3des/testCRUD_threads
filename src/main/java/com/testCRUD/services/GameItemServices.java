@@ -34,8 +34,9 @@ public class GameItemServices {
 		repo.deleteById(id);
 	}
 
+
 	@PostConstruct
-	private void postConstruct() {
+	private void createTestGameItem() {
 
 		List<GameItem> list = new ArrayList<>();
 
@@ -48,8 +49,8 @@ public class GameItemServices {
 		list.add(new GameItem(7L, "Item7", Status.PRODUCTION, "01-01-2007"));
 		list.add(new GameItem(8L, "Item8", Status.PRODUCTION, "01-01-2008"));
 		list.add(new GameItem(9L, "Item9", Status.PRODUCTION, "01-01-2009"));
-		list.add(new GameItem(10L, "Item10", Status.PRODUCTION, "01-01-2010"));
-		list.add(new GameItem(11L, "Item11", Status.RELEASE, "01-01-20011"));
+		list.add(new GameItem(10L, "Item10", Status.PRODUCTION, "01-01-2011"));
+		list.add(new GameItem(11L, "Item11", Status.PRODUCTION, "01-01-2011"));
 
 		repo.saveAll(list);
 	}
